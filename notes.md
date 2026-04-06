@@ -3,7 +3,12 @@
 ### 틀린 이유
 - size() unsigned 언더플로우
 - 파싱 마지막 원소 누락
-- stringstream, getline 사용방법 까먹음
+- stringstream, getline 사용방법 까먹음 
+stringstream ss(arr.substr(1, arr.size()-2)); 
+string tmp; 
+while(getline(ss, tmp, ',')){
+    if(!tmp.empty()) dq.push_back(stoi(tmp));
+}
   
 
 ### 핵심 패턴
